@@ -109,7 +109,7 @@ def render(density: float = 0.6, steps: int = 60):
         image_rgb = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
         
         image_rgb[grid == 1] = [34, 139, 34]   # Trees -> Green
-        image_rgb[grid == 2] = [256, 182, 3]    # Fire -> Orange/Red
+        image_rgb[grid == 2] = [43, 0, 255]    # Fire -> Orange/Red
         image_rgb[grid == 0] = [50, 50, 50]    # Ash -> Dark Gray
 
         frames.append(Image.fromarray(image_rgb, 'RGB'))
